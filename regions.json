@@ -1,0 +1,10 @@
+{
+  "regions": [
+    {
+      "id": "berrechid",
+      "name": "Berrechid",
+      "folder": "regions/berrechid",
+      "color": "#ffb020"
+    }
+  ]
+}

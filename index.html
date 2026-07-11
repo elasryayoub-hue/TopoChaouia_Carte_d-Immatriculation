@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>TopoChaouia — Carte des Titres</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="lockScreen">
+  <div class="lock-box">
+    <div class="lock-title">🔒 TopoChaouia</div>
+    <input id="lockInput" type="password" placeholder="Mot de passe" autocomplete="off">
+    <button id="lockBtn">Entrer</button>
+    <div id="lockError" class="hidden">Mot de passe incorrect</div>
+  </div>
+</div>
+<style>
+  #lockScreen{ position:fixed; inset:0; z-index:99999; background:#14181b;
+    display:flex; align-items:center; justify-content:center; }
+  #lockScreen.hidden{ display:none; }
+  .lock-box{ text-align:center; padding:24px; }
+  .lock-title{ color:#eef1f2; font-size:20px; margin-bottom:16px; font-family:sans-serif; }
+  #lockInput{ display:block; width:220px; padding:12px; border-radius:10px; border:1px solid #333;
+    background:#1b2023; color:#fff; font-size:16px; margin-bottom:10px; text-align:center; }
+  #lockBtn{ width:220px; padding:12px; border-radius:10px; border:none;
+    background:#ffb020; color:#1a1200; font-size:16px; font-weight:600; }
+  #lockError{ color:#ff5a5a; margin-top:10px; font-family:sans-serif; }
+</style>
+<script>
+  (function(){
+    const PASSWORD = "Elasry"; // <-- changez ce mot de passe ici
+    const saved = sessionStorage.getItem('topo_unlocked');
+    if (saved === '1') document.getElementById('lockScreen').classList.add('hidden');
+    document.getElementById('lockBtn').addEventListener('click', check);
+    document.getElementById('lockInput').addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+    function check(){
+      const val = document.getElementById('lockInput').value;
+      if (val === PASSWORD) {
+        sessionStorage.setItem('topo_unlocked', '1');
+        document.getElementById('lockScreen').classList.add('hidden');
+      } else {
+        document.getElementById('lockError').classList.remove('hidden');
+      }
+    }
+  })();
+</script>
+
+<div id="map"></div>
+
+<!-- Réticule central fixe (coordonnées Lambert Nord Maroc en direct) -->
+<div id="crosshairWrap">
+  <div id="crosshair">+</div>
+  <div id="coordReadout">
+    <span class="coord-x">X —</span><span class="coord-y">Y —</span>
+    <button id="btnTarget" title="Fixer ce point comme cible">🎯</button>
+  </div>
+</div>
+
+<!-- Top bar -->
+<div id="topbar">
+  <button id="btnMenu" class="iconbtn" aria-label="Menu">☰</button>
+  <div id="searchWrap">
+    <input id="searchInput" type="text" inputmode="numeric" placeholder="Rechercher un N° de titre…" autocomplete="off">
+    <button id="btnSearch" class="iconbtn" aria-label="Rechercher">🔍</button>
+  </div>
+</div>
+
+<div id="searchResults" class="hidden"></div>
+<div id="zoomBanner" class="hidden"></div>
+<div id="dataError" class="hidden"></div>
+<div id="targetInfo" class="hidden"></div>
+<div id="measureInfo" class="hidden"></div>
+<div id="areaInfo" class="hidden" style="position:absolute;left:10px;right:10px;z-index:1000;bottom:max(24px, env(safe-area-inset-bottom));background:#1b2023;border:1px solid rgba(255,255,255,0.10);border-radius:12px;padding:10px 14px;font-size:13px;color:#eef1f2;"></div>
+
+<!-- Side panel -->
+<div id="panel" class="hidden">
+  <div class="panel-header">
+    <span>Calques</span>
+    <button id="btnClosePanel" class="iconbtn">✕</button>
+  </div>
+  <div class="panel-body">
+    <label class="row"><input type="checkbox" id="toggleTitres" checked> Titres fonciers (parcelles)</label>
+    <label class="row"><input type="checkbox" id="toggleBornes" checked> Bornes</label>
+    <hr>
+    <div class="row-label">Zones (cadgis)</div>
+    <div id="regionList"></div>
+    <hr>
+    <label class="row"><input type="checkbox" id="toggleCrosshair" checked> Réticule + coordonnées Lambert</label>
+    <hr>
+    <div class="row-label">Fond de carte</div>
+    <label class="row"><input type="radio" name="basemap" value="sat" checked> Satellite</label>
+    <label class="row"><input type="radio" name="basemap" value="osm"> Plan (OSM)</label>
+    <hr>
+    <div id="statusInfo" class="status-info"></div>
+  </div>
+</div>
+
+<!-- Bottom-right controls -->
+<div id="controls">
+  <button id="btnOverview" class="fab" aria-label="Vue d'ensemble" title="Voir toute la zone couverte">🗺️</button>
+  <button id="btnMeasure" class="fab" aria-label="Mesurer une distance" title="Mesurer une distance">📏</button>
+  <button id="btnDrawArea" class="fab" aria-label="Dessiner une zone" title="Dessiner une zone (surface)">📐</button>  <button id="btnClearTarget" class="fab hidden" aria-label="Effacer la cible" title="Effacer la cible">🎯✕</button>
+  <button id="btnLocate" class="fab" aria-label="Ma position">📍</button>
+</div>
+
+<!-- Feature info sheet -->
+<div id="infoSheet" class="hidden">
+  <div class="sheet-handle"></div>
+  <button id="btnCloseInfo" class="iconbtn sheet-close" aria-label="Fermer">✕</button>
+  <div id="infoContent"></div>
+</div>
+
+<div id="loadingToast" class="hidden">Chargement des parcelles…</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.2/proj4.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
