@@ -53,7 +53,7 @@ async function init() {
   satLayer.addTo(map);
 
   titresLayerGroup = L.layerGroup().addTo(map);
-  bornesLayerGroup = L.layerGroup().addTo(map);
+  bornesLayerGroup = L.layerGroup();
   measureLayer = L.layerGroup().addTo(map);
   drawLayer = L.layerGroup().addTo(map);
 
@@ -99,7 +99,7 @@ async function loadOneRegion(meta) {
     searchIndex: null, searchIndexLoading: null,
     loadedTitreTiles: new Set(), loadedBornesTiles: new Set(),
     titresGroup: L.layerGroup(), bornesGroup: L.layerGroup(),
-    visible: true
+    visible: !!meta.default
   };
   try {
     const [tRes, bRes] = await Promise.all([
@@ -113,8 +113,10 @@ async function loadOneRegion(meta) {
     console.error('Erreur chargement de la zone', meta.id, e);
     return null;
   }
-  titresLayerGroup.addLayer(region.titresGroup);
-  bornesLayerGroup.addLayer(region.bornesGroup);
+  if (region.visible) {
+    titresLayerGroup.addLayer(region.titresGroup);
+    bornesLayerGroup.addLayer(region.bornesGroup);
+  }
   return region;
 }
 
@@ -225,7 +227,7 @@ function buildRegionPanel() {
     const r = regions[id];
     const row = document.createElement('label');
     row.className = 'row';
-    row.innerHTML = `<input type="checkbox" checked data-region="${id}"> <span class="region-dot" style="background:${r.color}"></span> ${escapeHtml(r.name)}`;
+    row.innerHTML = `<input type="checkbox" ${r.visible ? 'checked' : ''} data-region="${id}"> <span class="region-dot" style="background:${r.color}"></span> ${escapeHtml(r.name)}`;
     row.querySelector('input').addEventListener('change', e => toggleRegion(id, e.target.checked));
     container.appendChild(row);
   });
@@ -248,10 +250,11 @@ function toggleRegion(id, visible) {
 // Info sheet (parcelle / borne)
 // ---------------------------------------------------------------------
 function showTitreInfo(props, layer, region) {
+  const fmtSurf = v => (typeof v === 'number') ? v.toFixed(4) : v;
   const rows = [
     ['N° Titre', props.Num], ['Indice', props.indice], ['Complément', props.complement],
     ['Nature', props.Nature], ['Type', props.Type],
-    ['Surface calculée (m²)', props.Surf_Calc], ['Surface adoptée (m²)', props.Surf_Adop],
+    ['Surface calculée (m²)', fmtSurf(props.Surf_Calc)], ['Surface adoptée (m²)', fmtSurf(props.Surf_Adop)],
     ['Feuille (Mappe)', props.Mappe], ['Stade', props.stade], ['Désignation', props.TIT],
     ['Zone', region ? region.name : ''],
   ].filter(r => r[1] !== undefined && r[1] !== null && r[1] !== '');

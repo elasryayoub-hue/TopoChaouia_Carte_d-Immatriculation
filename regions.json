@@ -4,7 +4,15 @@
       "id": "berrechid",
       "name": "Berrechid",
       "folder": "regions/berrechid",
-      "color": "#ffb020"
+      "color": "#ffb020",
+      "default": true
+    },
+    {
+      "id": "settat",
+      "name": "Settat",
+      "folder": "regions/settat",
+      "color": "#35c7ff",
+      "default": false
     }
   ]
 }
