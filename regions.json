@@ -27,6 +27,13 @@
       "folder": "regions/tanger_beni_makada",
       "color": "#ff5a5a",
       "default": false
+    },
+	{
+      "id": "el_jadida_2021",
+      "name": "El Jadida 2021",
+      "folder": "regions/el_jadida_2021",
+      "color": "#ffb020",
+      "default": false
     }
   ]
 }
