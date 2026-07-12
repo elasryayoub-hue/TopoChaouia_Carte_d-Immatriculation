@@ -13,6 +13,13 @@
       "folder": "regions/settat",
       "color": "#35c7ff",
       "default": false
+    },
+	{
+      "id": "tanger_medina",
+      "name": "Tanger Médina",
+      "folder": "regions/tanger_medina",
+      "color": "#4dff8a",
+      "default": false
     }
   ]
 }
