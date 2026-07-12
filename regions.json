@@ -20,6 +20,13 @@
       "folder": "regions/tanger_medina",
       "color": "#4dff8a",
       "default": false
+    },
+	{
+      "id": "tanger_beni_makada",
+      "name": "Tanger Beni Makada",
+      "folder": "regions/tanger_beni_makada",
+      "color": "#ff5a5a",
+      "default": false
     }
   ]
 }
