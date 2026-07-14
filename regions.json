@@ -14,25 +14,32 @@
       "color": "#35c7ff",
       "default": false
     },
-	{
+    {
       "id": "tanger_medina",
       "name": "Tanger Médina",
       "folder": "regions/tanger_medina",
       "color": "#4dff8a",
       "default": false
     },
-	{
+    {
       "id": "tanger_beni_makada",
       "name": "Tanger Beni Makada",
       "folder": "regions/tanger_beni_makada",
       "color": "#ff5a5a",
       "default": false
     },
-	{
+    {
       "id": "el_jadida_2021",
       "name": "El Jadida 2021",
       "folder": "regions/el_jadida_2021",
       "color": "#ffb020",
+      "default": false
+    },
+	{
+      "id": "casa_ainchok",
+      "name": "Casa Ain Chok",
+      "folder": "regions/casa_ainchok",
+      "color": "#ff9933",
       "default": false
     }
   ]
