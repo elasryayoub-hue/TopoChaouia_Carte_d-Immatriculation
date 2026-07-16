@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "casa_nouacer",
+    "name": "Casa Nouacer",
+    "folder": "regions/casa_nouacer",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": true,
+  "titres_recuperes": 76666,
+  "bornes_recuperees": 528011,
+  "rapport": "RAPPORT.md"
+}

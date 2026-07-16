@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "errachidia",
+    "name": "Errachidia",
+    "folder": "regions/errachidia",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 43038,
+  "bornes_recuperees": 317425,
+  "rapport": "RAPPORT.md"
+}

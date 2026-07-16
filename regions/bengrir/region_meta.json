@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "bengrir",
+    "name": "Bengrir",
+    "folder": "regions/bengrir",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 59920,
+  "bornes_recuperees": 865972,
+  "rapport": "RAPPORT.md"
+}

@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "kariat",
+    "name": "Kariat",
+    "folder": "regions/kariat",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 13167,
+  "bornes_recuperees": 300996,
+  "rapport": "RAPPORT.md"
+}

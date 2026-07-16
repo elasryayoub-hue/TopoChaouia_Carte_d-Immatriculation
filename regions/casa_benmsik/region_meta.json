@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "casa_benmsik",
+    "name": "Casa Benmsik",
+    "folder": "regions/casa_benmsik",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 82554,
+  "bornes_recuperees": 405868,
+  "rapport": "RAPPORT.md"
+}

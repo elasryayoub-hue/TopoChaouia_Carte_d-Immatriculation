@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "agadir",
+    "name": "Agadir",
+    "folder": "regions/agadir",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 99962,
+  "bornes_recuperees": 563583,
+  "rapport": "RAPPORT.md"
+}

@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "elhajeb",
+    "name": "ElHajeb",
+    "folder": "regions/elhajeb",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 50593,
+  "bornes_recuperees": 482841,
+  "rapport": "RAPPORT.md"
+}

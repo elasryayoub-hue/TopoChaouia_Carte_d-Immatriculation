@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "benimellal",
+    "name": "BeniMellal",
+    "folder": "regions/benimellal",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 71071,
+  "bornes_recuperees": 638815,
+  "rapport": "RAPPORT.md"
+}

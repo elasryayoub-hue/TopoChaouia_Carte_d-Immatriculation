@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "sala_jadida",
+    "name": "Sala Jadida",
+    "folder": "regions/sala_jadida",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": true,
+  "titres_recuperes": 0,
+  "bornes_recuperees": 373,
+  "rapport": "RAPPORT.md"
+}

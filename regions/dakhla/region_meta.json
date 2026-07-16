@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "dakhla",
+    "name": "Dakhla",
+    "folder": "regions/dakhla",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": true,
+  "titres_recuperes": 0,
+  "bornes_recuperees": 0,
+  "rapport": "RAPPORT.md"
+}

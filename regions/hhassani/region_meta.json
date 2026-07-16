@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "hhassani",
+    "name": "Hhassani",
+    "folder": "regions/hhassani",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 29836,
+  "bornes_recuperees": 174350,
+  "rapport": "RAPPORT.md"
+}

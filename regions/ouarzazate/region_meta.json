@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "ouarzazate",
+    "name": "Ouarzazate",
+    "folder": "regions/ouarzazate",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 83774,
+  "bornes_recuperees": 808661,
+  "rapport": "RAPPORT.md"
+}

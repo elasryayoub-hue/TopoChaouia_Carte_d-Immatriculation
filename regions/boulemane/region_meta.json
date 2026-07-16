@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "boulemane",
+    "name": "Boulemane",
+    "folder": "regions/boulemane",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 12900,
+  "bornes_recuperees": 190610,
+  "rapport": "RAPPORT.md"
+}

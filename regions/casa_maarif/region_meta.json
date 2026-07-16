@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "casa_maarif",
+    "name": "Casa Maarif",
+    "folder": "regions/casa_maarif",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 12357,
+  "bornes_recuperees": 116328,
+  "rapport": "RAPPORT.md"
+}

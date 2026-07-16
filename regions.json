@@ -35,11 +35,74 @@
       "color": "#ffb020",
       "default": false
     },
-	{
+    {
       "id": "casa_ainchok",
       "name": "Casa Ain Chok",
       "folder": "regions/casa_ainchok",
       "color": "#ff9933",
+      "default": false
+    },
+    {
+      "id": "kenitra",
+      "name": "Kenitra",
+      "folder": "regions/kenitra",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "khemisset",
+      "name": "Khemisset",
+      "folder": "regions/khemisset",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "ouarzazate",
+      "name": "Ouarzazate",
+      "folder": "regions/ouarzazate",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "sala_jadida",
+      "name": "Sala Jadida",
+      "folder": "regions/sala_jadida",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "taroudant",
+      "name": "Taroudant",
+      "folder": "regions/taroudant",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "temara",
+      "name": "TEMARA",
+      "folder": "regions/temara",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "khenifra",
+      "name": "khenifra",
+      "folder": "regions/khenifra",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "khouribga",
+      "name": "KHOURIBGA",
+      "folder": "regions/khouribga",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "laayoune",
+      "name": "Laayoune",
+      "folder": "regions/laayoune",
+      "color": "#ffb020",
       "default": false
     }
   ]

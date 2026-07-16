@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "hassane",
+    "name": "Hassane",
+    "folder": "regions/hassane",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 21712,
+  "bornes_recuperees": 137511,
+  "rapport": "RAPPORT.md"
+}

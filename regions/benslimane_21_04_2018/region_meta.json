@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "benslimane_21_04_2018",
+    "name": "BENSLIMANE-21_04_2018",
+    "folder": "regions/benslimane_21_04_2018",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 42070,
+  "bornes_recuperees": 393040,
+  "rapport": "RAPPORT.md"
+}

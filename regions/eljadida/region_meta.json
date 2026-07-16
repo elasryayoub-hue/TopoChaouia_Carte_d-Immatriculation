@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "eljadida",
+    "name": "ELJADIDA",
+    "folder": "regions/eljadida",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": true,
+  "titres_recuperes": 132830,
+  "bornes_recuperees": 1698227,
+  "rapport": "RAPPORT.md"
+}

@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "azilal",
+    "name": "Azilal",
+    "folder": "regions/azilal",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 29423,
+  "bornes_recuperees": 480343,
+  "rapport": "RAPPORT.md"
+}

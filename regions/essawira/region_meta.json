@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "essawira",
+    "name": "Essawira",
+    "folder": "regions/essawira",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 97757,
+  "bornes_recuperees": 1230472,
+  "rapport": "RAPPORT.md"
+}

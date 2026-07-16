@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "alhoceima",
+    "name": "AlHoceima",
+    "folder": "regions/alhoceima",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 143344,
+  "bornes_recuperees": 1498996,
+  "rapport": "RAPPORT.md"
+}

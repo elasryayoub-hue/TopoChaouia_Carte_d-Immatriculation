@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "fquih_ben_salah",
+    "name": "FQUIH_BEN_SALAH",
+    "folder": "regions/fquih_ben_salah",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 31615,
+  "bornes_recuperees": 225107,
+  "rapport": "RAPPORT.md"
+}

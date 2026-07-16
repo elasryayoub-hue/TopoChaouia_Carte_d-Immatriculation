@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "casa_hay_hassani_complet",
+    "name": "Casa Hay Hassani Complet",
+    "folder": "regions/casa_hay_hassani_complet",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 29403,
+  "bornes_recuperees": 171232,
+  "rapport": "RAPPORT.md"
+}

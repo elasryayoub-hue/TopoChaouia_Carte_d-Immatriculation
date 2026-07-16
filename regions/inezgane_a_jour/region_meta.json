@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "inezgane_a_jour",
+    "name": "INEZGANE A JOUR",
+    "folder": "regions/inezgane_a_jour",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 93025,
+  "bornes_recuperees": 496998,
+  "rapport": "RAPPORT.md"
+}

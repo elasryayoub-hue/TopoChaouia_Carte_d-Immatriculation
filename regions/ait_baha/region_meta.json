@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "ait_baha",
+    "name": "Ait Baha",
+    "folder": "regions/ait_baha",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 39665,
+  "bornes_recuperees": 346327,
+  "rapport": "RAPPORT.md"
+}

@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "temara",
+    "name": "TEMARA",
+    "folder": "regions/temara",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 64523,
+  "bornes_recuperees": 341629,
+  "rapport": "RAPPORT.md"
+}

@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "kenitra",
+    "name": "Kenitra",
+    "folder": "regions/kenitra",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 120818,
+  "bornes_recuperees": 796640,
+  "rapport": "RAPPORT.md"
+}

@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "fes",
+    "name": "fes",
+    "folder": "regions/fes",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 52742,
+  "bornes_recuperees": 457719,
+  "rapport": "RAPPORT.md"
+}

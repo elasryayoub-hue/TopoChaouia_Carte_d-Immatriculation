@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "casa_anfaavecplanches",
+    "name": "Casa AnfaAvecPlanches",
+    "folder": "regions/casa_anfaavecplanches",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 90527,
+  "bornes_recuperees": 590657,
+  "rapport": "RAPPORT.md"
+}

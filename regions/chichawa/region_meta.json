@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "chichawa",
+    "name": "Chichawa",
+    "folder": "regions/chichawa",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 39987,
+  "bornes_recuperees": 643228,
+  "rapport": "RAPPORT.md"
+}

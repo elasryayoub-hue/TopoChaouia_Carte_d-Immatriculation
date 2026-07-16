@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "taroudant",
+    "name": "Taroudant",
+    "folder": "regions/taroudant",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 80611,
+  "bornes_recuperees": 975954,
+  "rapport": "RAPPORT.md"
+}

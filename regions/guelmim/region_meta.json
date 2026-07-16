@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "guelmim",
+    "name": "Guelmim",
+    "folder": "regions/guelmim",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 39842,
+  "bornes_recuperees": 482987,
+  "rapport": "RAPPORT.md"
+}

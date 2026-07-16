@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "khouribga",
+    "name": "KHOURIBGA",
+    "folder": "regions/khouribga",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": false,
+  "titres_recuperes": 116321,
+  "bornes_recuperees": 1320600,
+  "rapport": "RAPPORT.md"
+}

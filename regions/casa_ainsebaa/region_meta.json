@@ -1,0 +1,13 @@
+{
+  "region_entry": {
+    "id": "casa_ainsebaa",
+    "name": "Casa Ainsebaa",
+    "folder": "regions/casa_ainsebaa",
+    "color": "#ffb020",
+    "default": false
+  },
+  "consultation_needed": true,
+  "titres_recuperes": 56487,
+  "bornes_recuperees": 336780,
+  "rapport": "RAPPORT.md"
+}
