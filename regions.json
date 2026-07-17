@@ -1,6 +1,69 @@
 {
   "regions": [
     {
+      "id": "agadir",
+      "name": "Agadir",
+      "folder": "regions/agadir",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "ait_baha",
+      "name": "Ait Baha",
+      "folder": "regions/ait_baha",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "alhoceima",
+      "name": "AlHoceima",
+      "folder": "regions/alhoceima",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "angad",
+      "name": "Angad",
+      "folder": "regions/angad",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "azilal",
+      "name": "Azilal",
+      "folder": "regions/azilal",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "bengrir",
+      "name": "Bengrir",
+      "folder": "regions/bengrir",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "benimellal",
+      "name": "BeniMellal",
+      "folder": "regions/benimellal",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "benslimane_21_04_2018",
+      "name": "BENSLIMANE-21_04_2018",
+      "folder": "regions/benslimane_21_04_2018",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "berkane",
+      "name": "Berkane",
+      "folder": "regions/berkane",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
       "id": "berrechid",
       "name": "Berrechid",
       "folder": "regions/berrechid",
@@ -8,24 +71,94 @@
       "default": true
     },
     {
-      "id": "settat",
-      "name": "Settat",
-      "folder": "regions/settat",
-      "color": "#35c7ff",
+      "id": "boulemane",
+      "name": "Boulemane",
+      "folder": "regions/boulemane",
+      "color": "#ffb020",
       "default": false
     },
     {
-      "id": "tanger_medina",
-      "name": "Tanger Médina",
-      "folder": "regions/tanger_medina",
-      "color": "#4dff8a",
+      "id": "cadgis_khenifra",
+      "name": "Cadgis khenifra",
+      "folder": "regions/cadgis_khenifra",
+      "color": "#ffb020",
       "default": false
     },
     {
-      "id": "tanger_beni_makada",
-      "name": "Tanger Beni Makada",
-      "folder": "regions/tanger_beni_makada",
-      "color": "#ff5a5a",
+      "id": "casa_ainchok",
+      "name": "Casa Ain Chok",
+      "folder": "regions/casa_ainchok",
+      "color": "#ff9933",
+      "default": false
+    },
+    {
+      "id": "casa_ainsebaa",
+      "name": "Casa Ainsebaa",
+      "folder": "regions/casa_ainsebaa",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "casa_anfa",
+      "name": "Casa Anfa",
+      "folder": "regions/casa_anfa",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "casa_anfaavecplanches",
+      "name": "Casa AnfaAvecPlanches",
+      "folder": "regions/casa_anfaavecplanches",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "casa_benmsik",
+      "name": "Casa Benmsik",
+      "folder": "regions/casa_benmsik",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "casa_bernoussi",
+      "name": "Casa Bernoussi",
+      "folder": "regions/casa_bernoussi",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "casa_hay_hassani_complet",
+      "name": "Casa Hay Hassani Complet",
+      "folder": "regions/casa_hay_hassani_complet",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "casa_maarif",
+      "name": "Casa Maarif",
+      "folder": "regions/casa_maarif",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "casa_nouacer",
+      "name": "Casa Nouacer",
+      "folder": "regions/casa_nouacer",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "chichawa",
+      "name": "Chichawa",
+      "folder": "regions/chichawa",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "dakhla",
+      "name": "Dakhla",
+      "folder": "regions/dakhla",
+      "color": "#ffb020",
       "default": false
     },
     {
@@ -36,10 +169,87 @@
       "default": false
     },
     {
-      "id": "casa_ainchok",
-      "name": "Casa Ain Chok",
-      "folder": "regions/casa_ainchok",
-      "color": "#ff9933",
+      "id": "elhajeb",
+      "name": "ElHajeb",
+      "folder": "regions/elhajeb",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "eljadida",
+      "name": "ELJADIDA",
+      "folder": "regions/eljadida",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "errachidia",
+      "name": "Errachidia",
+      "folder": "regions/errachidia",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "essawira",
+      "name": "Essawira",
+      "folder": "regions/essawira",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "fes",
+      "name": "fes",
+      "folder": "regions/fes",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "fquih_ben_salah",
+      "name": "FQUIH_BEN_SALAH",
+      "folder": "regions/fquih_ben_salah",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "guelmim",
+      "name": "Guelmim",
+      "folder": "regions/guelmim",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "hassane",
+      "name": "Hassane",
+      "folder": "regions/hassane",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "hhassani",
+      "name": "Hhassani",
+      "folder": "regions/hhassani",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "ifrane",
+      "name": "Ifrane",
+      "folder": "regions/ifrane",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "inezgane_a_jour",
+      "name": "INEZGANE A JOUR",
+      "folder": "regions/inezgane_a_jour",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "kariat",
+      "name": "Kariat",
+      "folder": "regions/kariat",
+      "color": "#ffb020",
       "default": false
     },
     {
@@ -53,34 +263,6 @@
       "id": "khemisset",
       "name": "Khemisset",
       "folder": "regions/khemisset",
-      "color": "#ffb020",
-      "default": false
-    },
-    {
-      "id": "ouarzazate",
-      "name": "Ouarzazate",
-      "folder": "regions/ouarzazate",
-      "color": "#ffb020",
-      "default": false
-    },
-    {
-      "id": "sala_jadida",
-      "name": "Sala Jadida",
-      "folder": "regions/sala_jadida",
-      "color": "#ffb020",
-      "default": false
-    },
-    {
-      "id": "taroudant",
-      "name": "Taroudant",
-      "folder": "regions/taroudant",
-      "color": "#ffb020",
-      "default": false
-    },
-    {
-      "id": "temara",
-      "name": "TEMARA",
-      "folder": "regions/temara",
       "color": "#ffb020",
       "default": false
     },
@@ -102,6 +284,55 @@
       "id": "laayoune",
       "name": "Laayoune",
       "folder": "regions/laayoune",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "ouarzazate",
+      "name": "Ouarzazate",
+      "folder": "regions/ouarzazate",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "sala_jadida",
+      "name": "Sala Jadida",
+      "folder": "regions/sala_jadida",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "settat",
+      "name": "Settat",
+      "folder": "regions/settat",
+      "color": "#35c7ff",
+      "default": false
+    },
+    {
+      "id": "tanger_beni_makada",
+      "name": "Tanger Beni Makada",
+      "folder": "regions/tanger_beni_makada",
+      "color": "#ff5a5a",
+      "default": false
+    },
+    {
+      "id": "tanger_medina",
+      "name": "Tanger Médina",
+      "folder": "regions/tanger_medina",
+      "color": "#4dff8a",
+      "default": false
+    },
+    {
+      "id": "taroudant",
+      "name": "Taroudant",
+      "folder": "regions/taroudant",
+      "color": "#ffb020",
+      "default": false
+    },
+    {
+      "id": "temara",
+      "name": "TEMARA",
+      "folder": "regions/temara",
       "color": "#ffb020",
       "default": false
     }
