@@ -47,8 +47,8 @@ async function init() {
     { attribution: 'Imagery © Esri', maxZoom: 20, maxNativeZoom: 19 }
   );
   labelsLayer = L.tileLayer(
-    'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
-    { attribution: 'Esri', maxZoom: 20, maxNativeZoom: 19, pane: 'overlayPane' }
+    'https://services.arcgisonline.com/arcgis/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
+    { attribution: 'Esri', maxZoom: 20, maxNativeZoom: 19 }
   );
   osmLayer = L.tileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
