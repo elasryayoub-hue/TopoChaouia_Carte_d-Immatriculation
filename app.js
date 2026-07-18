@@ -12,7 +12,7 @@ proj4.defs('EPSG:26191',
   '+proj=lcc +lat_1=33.3 +lat_0=33.3 +lon_0=-5.4 +k_0=0.999625769 ' +
   '+x_0=500000 +y_0=300000 +ellps=clrk80ign +towgs84=31,146,47,0,0,0,0 +units=m +no_defs');
 
-let map, satLayer, osmLayer;
+let map, satLayer, osmLayer, labelsLayer;
 let titresLayerGroup, bornesLayerGroup, measureLayer, drawLayer;
 
 // regions[id] = {
@@ -46,11 +46,16 @@ async function init() {
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     { attribution: 'Imagery © Esri', maxZoom: 20, maxNativeZoom: 19 }
   );
+  labelsLayer = L.tileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
+    { attribution: 'Esri', maxZoom: 20, maxNativeZoom: 19, pane: 'overlayPane' }
+  );
   osmLayer = L.tileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     { attribution: '© OpenStreetMap', maxZoom: 19 }
   );
   satLayer.addTo(map);
+  labelsLayer.addTo(map);
 
   titresLayerGroup = L.layerGroup().addTo(map);
   bornesLayerGroup = L.layerGroup();
@@ -569,8 +574,15 @@ function wireUI() {
 
   document.querySelectorAll('input[name="basemap"]').forEach(r => {
     r.addEventListener('change', e => {
-      if (e.target.value === 'sat') { map.removeLayer(osmLayer); satLayer.addTo(map); }
-      else { map.removeLayer(satLayer); osmLayer.addTo(map); }
+      if (e.target.value === 'sat') {
+        map.removeLayer(osmLayer);
+        satLayer.addTo(map);
+        labelsLayer.addTo(map);
+      } else {
+        map.removeLayer(satLayer);
+        map.removeLayer(labelsLayer);
+        osmLayer.addTo(map);
+      }
     });
   });
 
