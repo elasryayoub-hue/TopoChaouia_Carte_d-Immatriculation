@@ -332,15 +332,23 @@ async function runSearch(query) {
   showToast(false);
 
   const q = query.toLowerCase();
+  const isNumeric = /^\d+$/.test(q);
+
   let matches = [];
   activeRegions.forEach((r, i) => {
-    const found = indices[i].filter(e =>
-      String(e.num).includes(q) || (e.mappe || '').toLowerCase().includes(q) || (e.tit || '').toLowerCase().includes(q)
-    ).slice(0, 30).map(e => ({ ...e, regionId: r.id }));
+    const found = indices[i].filter(e => {
+      if (isNumeric) {
+        // Numéro exact uniquement (toutes natures/indices confondus) — pas de correspondance partielle.
+        return String(e.num) === q;
+      }
+      return (e.mappe || '').toLowerCase().includes(q) || (e.tit || '').toLowerCase().includes(q);
+    }).map(e => ({ ...e, regionId: r.id }));
     matches = matches.concat(found);
   });
-  matches = matches.slice(0, 30);
+  // Pas de plafond artificiel : un numéro exact ne donne jamais des milliers
+  // de résultats (au pire quelques dizaines, entre natures/indices/zones).
 
+  if (matches.length > 200) matches = matches.slice(0, 200); // garde-fou uniquement pour la recherche textuelle (mappe/désignation)
   resultsEl.innerHTML = matches.length === 0
     ? '<div class="res-empty">Aucun titre trouvé</div>'
     : matches.map((m, i) =>
