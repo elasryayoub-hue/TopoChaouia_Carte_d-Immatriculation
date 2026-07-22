@@ -352,8 +352,8 @@ async function runSearch(query) {
   resultsEl.innerHTML = matches.length === 0
     ? '<div class="res-empty">Aucun titre trouvé</div>'
     : matches.map((m, i) =>
-        `<div class="res-item" data-i="${i}"><b>Titre ${escapeHtml(String(m.num))}</b>` +
-        `<div>${escapeHtml(regions[m.regionId].name)} · ${escapeHtml(m.mappe || '—')} ${m.indice ? '· indice ' + escapeHtml(m.indice) : ''}</div></div>`
+        `<div class="res-item" data-i="${i}"><b>${escapeHtml(m.tit || String(m.num))}</b>` +
+        `<div>${escapeHtml(regions[m.regionId].name)}</div></div>`
       ).join('');
   resultsEl.querySelectorAll('.res-item').forEach(el => {
     el.addEventListener('click', () => goToSearchResult(matches[parseInt(el.dataset.i)]));
