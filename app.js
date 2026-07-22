@@ -256,16 +256,16 @@ function toggleRegion(id, visible) {
 // ---------------------------------------------------------------------
 function showTitreInfo(props, layer, region) {
   const fmtSurf = v => (typeof v === 'number') ? v.toFixed(4) : v;
+  const refFonciere = `${props.Nature ?? ''}${props.Num ?? ''}/${props.indice ?? ''}(${props.complement ?? ''})`;
   const rows = [
-    ['N° Titre', props.Num], ['Indice', props.indice], ['Complément', props.complement],
-    ['Nature', props.Nature], ['Type', props.Type],
+    ['Type', props.Type],
     ['Surface calculée (m²)', fmtSurf(props.Surf_Calc)], ['Surface adoptée (m²)', fmtSurf(props.Surf_Adop)],
     ['Feuille (Mappe)', props.Mappe], ['Stade', props.stade], ['Désignation', props.TIT],
     ['Zone', region ? region.name : ''],
   ].filter(r => r[1] !== undefined && r[1] !== null && r[1] !== '');
 
   document.getElementById('infoContent').innerHTML =
-    `<h3>Titre N° ${props.Num ?? ''}</h3>` +
+    `<h3>Réf. Foncière : ${escapeHtml(refFonciere)}</h3>` +
     rows.map(r => `<div class="info-row"><span>${r[0]}</span><span>${escapeHtml(String(r[1]))}</span></div>`).join('');
   openInfoSheet();
 
