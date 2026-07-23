@@ -190,8 +190,7 @@ async function loadTitreTile(region, tileMeta) {
     const res = await fetch(`${region.folder}/${tileMeta.file}`);
     const gj = await res.json();
     L.geoJSON(gj, {
-      style: () => styleTitre(region),
-      onEachFeature: (feature, lyr) => lyr.on('click', () => showTitreInfo(feature.properties, lyr, region))
+      style: () => styleTitre(region)
     }).addTo(region.titresGroup);
   } catch (e) {
     region.loadedTitreTiles.delete(key);
@@ -273,6 +272,62 @@ function showTitreInfo(props, layer, region) {
     if (highlightLayer) map.removeLayer(highlightLayer);
     highlightLayer = L.geoJSON(layer.feature, { style: { color: '#ffffff', weight: 4, fillOpacity: 0.05 } }).addTo(map);
   }
+}
+
+function pointInRing(latlng, ring) {
+  let inside = false;
+  const x = latlng.lng, y = latlng.lat;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i].lng, yi = ring[i].lat;
+    const xj = ring[j].lng, yj = ring[j].lat;
+    const intersect = ((yi > y) !== (yj > y)) &&
+      (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+    if (intersect) inside = !inside;
+  }
+  return inside;
+}
+
+function findTitresAtLatLng(latlng) {
+  const results = [];
+  regionOrder.forEach(id => {
+    const r = regions[id];
+    if (!r.visible) return;
+    r.titresGroup.eachLayer(sub => {
+      if (!sub.eachLayer) return;
+      sub.eachLayer(lyr => {
+        if (!lyr.feature) return;
+        const rings = lyr.getLatLngs();
+        const outer = Array.isArray(rings[0]) ? rings[0] : rings;
+        if (pointInRing(latlng, outer)) {
+          results.push({ feature: lyr.feature, layer: lyr, region: r });
+        }
+      });
+    });
+  });
+  return results;
+}
+
+let pendingTitreChoices = [];
+
+function showTitreChoiceList(hits, latlng) {
+  pendingTitreChoices = hits;
+  const html = '<div class="choice-title">' + hits.length + ' titres superposés à cet endroit :</div>' +
+    hits.map((h, i) => {
+      const p = h.feature.properties;
+      const ref = `${p.Nature ?? ''}${p.Num ?? ''}/${p.indice ?? ''}(${p.complement ?? ''})`;
+      return `<div class="choice-item" onclick="selectTitreChoice(${i})">${escapeHtml(ref)} <span class="choice-zone">${escapeHtml(h.region.name)}</span></div>`;
+    }).join('');
+  L.popup({ maxWidth: 280, className: 'titre-choice-popup' })
+    .setLatLng(latlng)
+    .setContent(html)
+    .openOn(map);
+}
+
+function selectTitreChoice(i) {
+  const h = pendingTitreChoices[i];
+  if (!h) return;
+  map.closePopup();
+  showTitreInfo(h.feature.properties, h.layer, h.region);
 }
 
 function showBorneInfo(props, coords) {
@@ -610,8 +665,15 @@ function wireUI() {
   document.getElementById('infoSheet').querySelector('.sheet-handle').addEventListener('click', closeInfoSheet);
 
   map.on('click', e => {
-    if (measureActive) handleMapClickForMeasure(e.latlng);
-    if (drawAreaActive) handleMapClickForDraw(e.latlng);
+    if (measureActive) { handleMapClickForMeasure(e.latlng); return; }
+    if (drawAreaActive) { handleMapClickForDraw(e.latlng); return; }
+    const hits = findTitresAtLatLng(e.latlng);
+    if (hits.length === 0) return;
+    if (hits.length === 1) {
+      showTitreInfo(hits[0].feature.properties, hits[0].layer, hits[0].region);
+    } else {
+      showTitreChoiceList(hits, e.latlng);
+    }
   });
 }
 
